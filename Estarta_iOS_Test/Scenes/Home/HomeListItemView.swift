@@ -17,7 +17,7 @@ struct HomeListItemView: View {
                 ImageView(withURL: result?.imageUrls?[0] ?? "")
                     .scaledToFill()
                     .cornerRadius(12)
-                    .frame(width: 80, height: 800
+                    .frame(width: 80, height: 80)
                     
                     
                 VStack(alignment: .center) {
