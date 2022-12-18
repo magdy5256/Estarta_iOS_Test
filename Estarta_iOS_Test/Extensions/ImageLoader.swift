@@ -71,6 +71,7 @@ struct ImageView: View {
         ZStack {
             Image(uiImage: ((imageLoader.image ?? UIImage(named: "icons8-image-file")) ?? UIImage()))
                 .resizable()
+                .aspectRatio(contentMode: .fit)
             ProgressView()
                 .frame(width: UIScreen.main.bounds.width / 2,
                        height: UIScreen.main.bounds.height / 2)

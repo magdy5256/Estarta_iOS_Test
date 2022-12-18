@@ -15,12 +15,15 @@ struct HomeListItemView: View {
             Color(hex: Color.extraLightGray)
             HStack(alignment: .center,spacing: 12) {
                 ImageView(withURL: result?.imageUrls?[0] ?? "")
-                    .scaledToFill()
+                    .scaledToFit()
+                    
                     .cornerRadius(12)
-                    .frame(width: 80, height: 80)
+                    .frame(width: 100, height: 100)
+                    .clipShape(Circle())
+                    .padding()
                     
                     
-                VStack(alignment: .center) {
+                VStack(alignment: .leading) {
                     Text(result?.name ?? "")
                         .font(.system(size: 20, weight: .bold, design: .default))
                     
@@ -37,7 +40,7 @@ struct HomeListItemView: View {
             }.padding(.leading, 8)
                 
            
-        }//.frame(height: 200)
+        }.frame(height: 180)
             .cornerRadius(15)
             .padding(.horizontal, 12)
         
