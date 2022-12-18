@@ -27,7 +27,7 @@ struct HomeView: View {
                             if let resultscount = results?.count ?? 0{
                                 ForEach(0..<resultscount, id: \.self) { index in
                                    
-                                    HomeListItemView(result: results?[index]).background(Color.random())
+                                    HomeListItemView(result: results?[index])
                                         .onTapGesture {
                                             print(index)
                                             selectedResult = results?[index]

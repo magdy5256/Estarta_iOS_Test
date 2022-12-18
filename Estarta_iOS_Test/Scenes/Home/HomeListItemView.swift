@@ -13,10 +13,12 @@ struct HomeListItemView: View {
     var body: some View {
         ZStack(alignment:.leading) {
             Color(hex: Color.extraLightGray)
-            VStack(alignment: .center,spacing: 12) {
+            HStack(alignment: .center,spacing: 12) {
                 ImageView(withURL: result?.imageUrls?[0] ?? "")
-                    .frame(height: 120)
+                    .scaledToFill()
                     .cornerRadius(12)
+                    .frame(width: 80, height: 800
+                    
                     
                 VStack(alignment: .center) {
                     Text(result?.name ?? "")
@@ -31,11 +33,11 @@ struct HomeListItemView: View {
                             .font(.system(size: 15, weight: .bold, design: .default))
                     }
                     
-                }.background(Color.random())
+                }
             }.padding(.leading, 8)
                 
            
-        }.frame(height: 200)
+        }//.frame(height: 200)
             .cornerRadius(15)
             .padding(.horizontal, 12)
         
